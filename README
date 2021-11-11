@@ -1,0 +1,9 @@
+Benötigte Programme:
+- C++ Compiler mit Unterstützung für C++11
+- Qt-Klassenbibliothek (Version 5.7 wurde hier benutzt)
+- Qt-Creator
+================================================
+Erstellen des Programms:
+1) "KreuzungsSimulator.pro" im Qt-Creator öffnen
+2) Build-Verzeichnis wählen (unter "Projekte" im Qt-Creator)
+3) Ausführen

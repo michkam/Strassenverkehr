@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SimulationGUI</class>
+ <widget class="QMainWindow" name="SimulationGUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>856</width>
+    <height>644</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Kreuzungssimulator</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="hauptVertikalesLayout" stretch="0,9">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>125</height>
+       </size>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::North</enum>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="tabsClosable">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="spurenTab">
+       <attribute name="title">
+        <string>Ändere Spuren</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QTabWidget" name="spurenTabWidget">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="nordSpurenTab">
+           <attribute name="title">
+            <string>Nord</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1,2">
+            <item>
+             <widget class="QPushButton" name="nordSpurHinzufuegenButton">
+              <property name="text">
+               <string>Spur hinzufügen</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="nordSpurEntfernenButton">
+              <property name="text">
+               <string>Spur entfernen</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="nordFussgaengerUeberwegButton">
+              <property name="text">
+               <string>Fußgängerüberweg</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="suedSpurenTab">
+           <attribute name="title">
+            <string>Süd</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,1,2">
+            <item>
+             <widget class="QPushButton" name="suedSpurHinzufuegenButton">
+              <property name="text">
+               <string>Spur hinzufügen</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="suedSpurEntfernenButton">
+              <property name="text">
+               <string>Spur entfernen</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="suedFussgaengerUeberwegButton">
+              <property name="text">
+               <string>Fußgängerüberweg</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="westSpurenTab">
+           <attribute name="title">
+            <string>West</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,1,2">
+            <item>
+             <widget class="QPushButton" name="westSpurHinzufuegenButton">
+              <property name="text">
+               <string>Spur hinzufügen</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="westSpurEntfernenButton">
+              <property name="text">
+               <string>Spur entfernen</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="westFussgaengerUeberwegButton">
+              <property name="text">
+               <string>Fußgängerüberweg</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="ostSpurenTab">
+           <attribute name="title">
+            <string>Ost</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="1,1,2">
+            <item>
+             <widget class="QPushButton" name="ostSpurHinzufuegenButton">
+              <property name="text">
+               <string>Spur hinzufügen</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="ostSpurEntfernenButton">
+              <property name="text">
+               <string>Spur entfernen</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="ostFussgaengerUeberwegButton">
+              <property name="text">
+               <string>Fußgängerüberweg</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="phasenTab">
+       <attribute name="title">
+        <string>Ändere Ampelphasen</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_11" stretch="7,3">
+        <item>
+         <widget class="QListView" name="phasenList">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="phasenLayout" stretch="0,0,0">
+          <item>
+           <widget class="QPushButton" name="phaseHinzufuegenButton">
+            <property name="text">
+             <string>Hinzufügen</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="phaseEntfernenButton">
+            <property name="text">
+             <string>Entfernen</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="phasenDauerButton">
+            <property name="text">
+             <string>Phasendauer...</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="szenarioTab">
+       <attribute name="title">
+        <string>Ändere Verkehrsfluss</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QTabWidget" name="szenarienTabWidget">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="nordSzenarienTab">
+           <attribute name="title">
+            <string>Nord</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <item>
+             <widget class="QPushButton" name="nordFahrzeugSzenarioButton">
+              <property name="text">
+               <string>Fahrzeuge...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="nordFussgaengerSzenarioButton">
+              <property name="text">
+               <string>Fußgänger...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="suedSzenarienTab">
+           <attribute name="title">
+            <string>Süd</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout_7">
+            <item>
+             <widget class="QPushButton" name="suedFahrzeugSzenarioButton">
+              <property name="text">
+               <string>Fahrzeuge...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="suedFussgaengerSzenarioButton">
+              <property name="text">
+               <string>Fußgänger...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="westSzenarienTab">
+           <attribute name="title">
+            <string>West</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <item>
+             <widget class="QPushButton" name="westFahrzeugSzenarioButton">
+              <property name="text">
+               <string>Fahrzeuge...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="westFussgaengerSzenarioButton">
+              <property name="text">
+               <string>Fußgänger...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="ostSzenarienTab">
+           <attribute name="title">
+            <string>Ost</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout_9">
+            <item>
+             <widget class="QPushButton" name="ostFahrzeugSzenarioButton">
+              <property name="text">
+               <string>Fahrzeuge...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="ostFussgaengerSzenarioButton">
+              <property name="text">
+               <string>Fußgänger...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="simuliereTab">
+       <attribute name="title">
+        <string>Simuliere</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_10">
+        <item>
+         <widget class="QSlider" name="geschwindigkeitsSlider">
+          <property name="maximum">
+           <number>4</number>
+          </property>
+          <property name="pageStep">
+           <number>1</number>
+          </property>
+          <property name="value">
+           <number>1</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="tickPosition">
+           <enum>QSlider::TicksBothSides</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="starteSimulationButton">
+          <property name="text">
+           <string>Start</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="stoppeSimulationButton">
+          <property name="text">
+           <string>Stopp</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="oeffneStatistikDialogButton">
+          <property name="text">
+           <string>Statistik...</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="kreuzungLayout"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>856</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuKreuzung">
+    <property name="title">
+     <string>Kreuzung</string>
+    </property>
+    <addaction name="actionNeu"/>
+    <addaction name="separator"/>
+    <addaction name="actionOeffnen"/>
+    <addaction name="actionSpeichern"/>
+   </widget>
+   <widget class="QMenu" name="menuSzenario">
+    <property name="title">
+     <string>Szenario</string>
+    </property>
+    <addaction name="actionSzenarioNeu"/>
+    <addaction name="separator"/>
+    <addaction name="actionSzenarioOeffnen"/>
+    <addaction name="actionSzenarioSpeichern"/>
+   </widget>
+   <addaction name="menuKreuzung"/>
+   <addaction name="menuSzenario"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionNeu">
+   <property name="text">
+    <string>Neu</string>
+   </property>
+  </action>
+  <action name="actionOeffnen">
+   <property name="text">
+    <string>Öffnen...</string>
+   </property>
+  </action>
+  <action name="actionSpeichern">
+   <property name="text">
+    <string>Speichern...</string>
+   </property>
+  </action>
+  <action name="actionSzenarioNeu">
+   <property name="text">
+    <string>Neu</string>
+   </property>
+  </action>
+  <action name="actionSzenarioOeffnen">
+   <property name="text">
+    <string>Öffnen...</string>
+   </property>
+  </action>
+  <action name="actionSzenarioSpeichern">
+   <property name="text">
+    <string>Speichern</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
